@@ -27,6 +27,7 @@ public class Component extends Clickable {
 	private int scrollSpeed = 1;
 	
 	private ClickInterface clickAction;
+	private DrawnImage custom;
 	
 	public Component(PApplet parent, int type) {
 		super(parent);
@@ -52,6 +53,10 @@ public class Component extends Clickable {
 	public Component setClickAction(ClickInterface clickAction) {
 		this.clickAction = clickAction;
 		return this;
+	}
+	
+	public void setCustomImage(DrawnImage custom) {
+		this.custom = custom;
 	}
 	
 	public void setImage(PGraphics img) {
@@ -81,6 +86,9 @@ public class Component extends Clickable {
 			break;
 		default:
 			defaultDraw();
+		}
+		if (custom != null) {
+			custom.drawImage();
 		}
 	}
 	
