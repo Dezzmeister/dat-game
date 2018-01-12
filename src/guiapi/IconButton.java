@@ -18,7 +18,13 @@ public class IconButton extends Clickable {
 	
 	private ClickInterface clickAction;
 	
-	//Define what happens when the button is clicked with clickAction - accepts lambda expressions
+	/**
+	 * Creates an IconButton, sets the image and onClick action.
+	 * 
+	 * @param parent PApplet to be drawn to
+	 * @param imgpath path to the IconButton's icon
+	 * @param clickAction FunctionalInterface, accepts lambda expressions and method references.
+	 */
 	public IconButton(PApplet parent, String imgpath, ClickInterface clickAction) {
 		super(parent);
 		this.parent = parent;
@@ -29,7 +35,14 @@ public class IconButton extends Clickable {
 		initialize();
 	}
 	
-	//Does not set any clicking action
+	/**
+	 * Creates an IconButton and sets the image.
+	 * Will also print a message saying that onClick() is undefined.
+	 * 
+	 * @param parent PApplet to be drawn to
+	 * @param imgpath path to the IconButton's icon
+	 * @see #setClickBehavior(ClickInterface)
+	 */
 	public IconButton(PApplet parent, String imgpath) {
 		super(parent);
 		this.parent = parent;
@@ -40,13 +53,22 @@ public class IconButton extends Clickable {
 		initialize();
 	}
 	
-	//Self explanatory. Call at initialization
+	/**
+	 * Sets the button to toggle.
+	 * Returns an instance of this as part of the Fluent Interface.
+	 * 
+	 * @return updated instance of this component
+	 */
 	public IconButton setToggleable() {
 		toggleable = true;
 		return this;
 	}
 	
-	//Set the click behavior
+	/**
+	 * Defines what code is run when the button is clicked.
+	 * 
+	 * @param clickAction lambda expression or method reference
+	 */
 	public void setClickBehavior(ClickInterface clickAction) {
 		this.clickAction = clickAction;
 		defined = true;
@@ -69,6 +91,9 @@ public class IconButton extends Clickable {
 		height = img.height;
 	}
 	
+	/**
+	 * Draws the button. Should not be explicitly called by the user.
+	 */
 	@Override	//Only call this method if you haven't added the IconButton to Global.iconbuttons, and only call it in drawIconButtons(). 
 	public void draw() {
 		if (active) {

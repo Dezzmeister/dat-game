@@ -6,12 +6,16 @@ import guiapi.Element;
 import guiapi.GUIAPP;
 import guiapi.Global;
 import guiapi.IconButton;
+import guiapi.Placeable;
 import guiapi.Toolbar;
 import processing.core.PApplet;
 
 @SuppressWarnings("unused")
 public class Client extends PApplet implements GUIAPP {
+	
+	
 	Cursor cursor;
+	Placeable p;
 	
 	public static void main(String[] args) {
 		PApplet.main("core.Client");
@@ -22,6 +26,7 @@ public class Client extends PApplet implements GUIAPP {
 	}
 	
 	public void setup() {
+		p = new Placeable();
 		Global.focused = this;
 		surface.setTitle("Linegame Level Editor");
 		noCursor();

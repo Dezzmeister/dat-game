@@ -39,6 +39,10 @@ public class Clickable extends Element{
 		return false;
 	}
 	
+	/**
+	 * 
+	 * @return true if the mouse is currently pressed anywhere on the PApplet
+	 */
 	public boolean isClicked() {
 		return parent.mousePressed;
 	}
@@ -51,6 +55,15 @@ public class Clickable extends Element{
 		return false;
 	}
 	
+	/**
+	 * Returns true once if the mouse is clicked within the borders defined by
+	 * x and y coordinates and a PGraphics object.
+	 * 
+	 * @param x upper left x corner
+	 * @param y upper left y corner
+	 * @param p PGraphics object
+	 * @return true if the mouse was clicked in the defined boundaries
+	 */
 	public boolean wasClicked(int x, int y, PGraphics p) {
 		int xMin = x;
 		int xMax = x + p.width;
@@ -65,6 +78,16 @@ public class Clickable extends Element{
 		return false;
 	}
 	
+	/**
+	 * Returns true once if the mouse was clicked within the borders defined by
+	 * 2 coordinate pairs representing two corners of a rectangle.
+	 * 
+	 * @param x1 upper left x
+	 * @param y1 upper left y
+	 * @param x2 lower right x
+	 * @param y2 lower right y
+	 * @return true if the mouse was clicked within the defined boundaries
+	 */
 	public boolean wasClicked(int x1, int y1, int x2, int y2) {
 		int xMin = Math.min(x1, x2);
 		int xMax = Math.max(x1, x2);
