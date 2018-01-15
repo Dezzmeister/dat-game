@@ -2,8 +2,6 @@ package guiapi;
 
 public interface GUIAPP {
 	
-	public void settings();
-	
 	public void setup();
 	
 	public void draw();

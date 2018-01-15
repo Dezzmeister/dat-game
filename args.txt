@@ -1,0 +1,2 @@
+C:\java\eclipse-workspace\LinegameEditor2\src\core\Client.java
+C:\java\eclipse-workspace\LinegameEditor2\src\guiapi\GUIAPP.java

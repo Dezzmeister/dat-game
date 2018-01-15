@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"guiapi","l":"Clickable"},{"p":"guiapi","l":"ClickInterface"},{"p":"core","l":"Client"},{"p":"guiapi","l":"Component"},{"p":"guiapi","l":"Cursor"},{"p":"guiapi","l":"DrawnImage"},{"p":"guiapi","l":"Element"},{"p":"guiapi","l":"Global"},{"p":"guiapi","l":"GUIAPP"},{"p":"guiapi","l":"IconButton"},{"p":"guiapi","l":"Placeable"},{"p":"guiapi","l":"Toolbar"}]
